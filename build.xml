@@ -6,8 +6,12 @@
 	<target name="deploy">
 		<copy todir="E:">
 			<fileset dir=".">
-				<include name="script/*" />
 				<include name="SD_WLAN/*" />
+			</fileset>
+		</copy>
+		<copy todir="E:">
+			<fileset dir="script">
+				<include name="DropboxUpload2.lua" />
 			</fileset>
 		</copy>
 	</target>
