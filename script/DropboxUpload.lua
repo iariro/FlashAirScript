@@ -5,7 +5,7 @@ This script uploads and files in a directory to dropbox, using oauth2.
 It will store the access token in dropbox_token.txt
 --]]
 local tokenfile		= "/dropbox_token.txt" 	-- Where to log output on the FA
-local folder 		= "/Upload" 		-- What folder to upload files from
+local folder 		= "/PRIVATE/SONY/VOICE/NHK-FM"		-- What folder to upload files from
 local app_key		= "tkbaa41nnxsbrht"	-- Your Dropbox app's key
 local app_secret	= "bkqm4wyvz5qlqdp"	-- Your Dropbox app's secret
 
