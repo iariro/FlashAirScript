@@ -4,9 +4,10 @@
 	<!-- FlashAir build.xml -->
 
 	<target name="deploy">
-		<copy todir="D:">
+		<copy todir="E:">
 			<fileset dir=".">
-				<include name="script,SD_WLAN" />
+				<include name="script/*" />
+				<include name="SD_WLAN/*" />
 			</fileset>
 		</copy>
 	</target>
