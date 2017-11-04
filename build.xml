@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<project default="deploy">
+
+	<!-- FlashAir build.xml -->
+
+	<target name="deploy">
+		<copy todir="D:">
+			<fileset dir=".">
+				<include name="script,SD_WLAN" />
+			</fileset>
+		</copy>
+	</target>
+
+</project>
