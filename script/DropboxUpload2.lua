@@ -10,7 +10,7 @@ fpath = "/PRIVATE/SONY/VOICE/NHK-FM";
 
 --ここにアクセストークン。自分用のAPI登録をしたなら、Generated access tokenで生成できる。
 --公式のサンプルのように、appKeyやappSecretを使っていろいろする必要はない。
-token = "2M8Phv3G3UAAAAAAAAAB6xdzvSBNMVfBWdc0XBYMyg8";
+token = "2M8Phv3G3UAAAAAAAAAB7tJsmiIuTnrgvxCLQ5wbqvlVGQRq6KD7E6Roo5u1_u2D";
 
 --アップロード先フォルダ
 --App folder&#8211; Access to a single folder created specifically for your app.にしたなら、
