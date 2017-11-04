@@ -1,4 +1,10 @@
 
+
+print("Hello World!")
+local file = io.open("log/Hello.txt", "a")
+file:write("Hello There!\r\n")
+file:close()
+
 --150MBまでの最新のファイルを自動で探索しDropboxにアップロードするサンプル
 
 --ファイルの書き込みをしないので安全。
