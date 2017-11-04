@@ -111,3 +111,42 @@ local function uploadFile(folder, file, access_token)
 	print(b)
 
 end
+
+
+--Script starts
+
+--Attempt to load a token from the file
+token = loadToken()
+
+--See if we loaded one, if not request one
+if token == nil then
+	--Request an access token
+	print("No token found, attempting to request one...")
+	token = requestToken(app_key, app_secret, auth_code)
+
+	--Was it successful?
+	if token == nil then
+		print("Failed to request token, do you need to authorize?")
+		print("Auth url: https://www.dropbox.com/1/oauth2/authorize?client_id="..app_key.."&response_type=code")
+	else
+		print("New token: "..token)
+		saveToken(token)
+	end
+
+end
+
+--Before continuing, make sure we have an access token
+if token ~= nil then
+	print("INIT, with token: "..token)
+	-- For each file in folder...
+	for file in lfs.dir(folder) do
+		-- Get that file's attributes
+		attr = lfs.attributes(folder .. "/" .. file)
+
+		-- Don't worry about directories (yet)
+		if attr.mode == "file" then
+			--Attempt to upload the file!
+			uploadFile(folder, file, token)
+		end
+	end
+end
