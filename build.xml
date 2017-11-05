@@ -11,7 +11,7 @@
 		</copy>
 		<copy todir="E:">
 			<fileset dir="script">
-				<include name="DropboxUpload2.lua" />
+				<include name="hello.lua" />
 			</fileset>
 		</copy>
 	</target>
