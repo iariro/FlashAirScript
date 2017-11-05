@@ -10,8 +10,8 @@
 			</fileset>
 		</copy>
 		<copy todir="E:">
-			<fileset dir="script">
-				<include name="hello.lua" />
+			<fileset dir=".">
+				<include name="script/*.lua" />
 			</fileset>
 		</copy>
 	</target>

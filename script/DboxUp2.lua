@@ -1,10 +1,4 @@
 
-
-print("Hello World!")
-local file = io.open("log/Hello.txt", "a")
-file:write("Hello There!\r\n")
-file:close()
-
 --150MBまでの最新のファイルを自動で探索しDropboxにアップロードするサンプル
 
 --ファイルの書き込みをしないので安全。
@@ -41,7 +35,7 @@ filename = "";
 --プロセス開始
 
    sleep(6000); --ファイル書き込み待機(カメラや使う機器が書き込み終了するまでにかかる時間に合わせて変更する。)
-     　--ここを下手に短くすると、カメラがエラーを吐いたり、写真が破損したり、1つまえに撮影した画像がアップロードされたりする
+     --ここを下手に短くすると、カメラがエラーを吐いたり、写真が破損したり、1つまえに撮影した画像がアップロードされたりする
  
 --ファイル走査
  --http://dotnsf.blog.jp/archives/2015-09-16.htmlより、最新のファイルを探す
@@ -55,6 +49,11 @@ filename = "";
    last_filepath = filepath
   end
  end
+
+local file = io.open("log/DboxUp2.txt", "a")
+file:write(last_filepath .. "\r\n")
+file:close()
+
 
  --ファイルがなければ終了
  if(last_filepath == "")then print("No file."); goto EXIT; end;
